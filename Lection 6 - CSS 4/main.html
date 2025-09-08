@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пионер</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+      
+      body {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 16px;
+            line-height: 120%;
+        }
+      
+      .container {
+        width: 1600px;
+        margin: 0 auto;
+      }
+
+      /*Стили для header*/
+      .contact_info_container {
+        float: right;
+      }
+
+      .contact_info {
+        padding: 15px;
+        float: left;
+      }
+
+      .logo {
+        display: inline-block;
+        margin-top: 25px;
+      }
+
+      .contact_info a {
+        color: #607CE6;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      nav {
+        margin-top: 50px;
+        border-top: 1px solid grey;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      nav ul li:first-child {
+        padding-left: 0;
+      }
+      nav ul li {
+        display: inline-block;
+        padding: 25px;
+      }
+
+      nav ul li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .btn {
+        color: #607CE6;
+        text-transform: uppercase;
+      }
+
+      /*Стили для header завершение*/
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <a class="logo" href="#"><img src="./img/logo.svg" alt="logo_info"> </a>
+      <div class="contact_info_container">
+        <div class="contact_info">
+          <span>По вопросам и предложениям</span> <br />
+          <a href="#">pionerrr@examle.ru</a>
+        </div>
+        <div class="contact_info">
+          <span>Для консультаций</span> <br />
+          <a href="#">+7 (111) 111-11-11</a>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li>Главная</li>
+          <li>О предприятии</li>
+          <li>Новости</li>
+          <li>Прод укция</li>
+          <li>Услуги</li>
+          <li>Поддержка</li>
+          <li>География поставок</li>
+          <li>Контакты</li>
+
+          <li class="btn">Перезвоните мне</li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

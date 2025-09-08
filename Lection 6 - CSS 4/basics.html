@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS Basics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Custom CSS goes here - we'll use it to demonstrate CSS concepts */
+        
+        /* This is how you style elements by their type */
+        h1 {
+            color: #3b82f6; /* blue-500 from Tailwind */
+            font-weight: bold;
+        }
+        
+        /* This is how you style elements by class */
+        .highlight-box {
+            border-left: 4px solid #3b82f6;
+            background-color: #f8fafc;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        /* This is how you style elements by ID */
+        #special-button {
+            background-color: #10b981;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+        }
+        
+        /* This shows how to use pseudo-classes */
+        #special-button:hover {
+            background-color: #059669;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- This is the main header section -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <!-- This is a navigation bar -->
+            <nav class="flex justify-between items-center">
+                <!-- Logo section -->
+                <div class="flex items-center space-x-2">
+                    <i data-feather="code" class="text-blue-500"></i>
+                    <span class="font-bold text-xl">HTML+CSS Basics</span>
+                </div>
+                
+                <!-- Navigation links -->
+                <ul class="flex space-x-6">
+                    <li><a href="#html" class="hover:text-blue-500">HTML</a></li>
+                    <li><a href="#css" class="hover:text-blue-500">CSS</a></li>
+                    <li><a href="#examples" class="hover:text-blue-500">Examples</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content section -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Основы HTML и CSS</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                На этой странице демонстрируются основные принципы построения HTML и CSS-стилей.
+                Просмотрите исходный код, чтобы увидеть, как все работает!
+            </p>
+        </section>
+
+        <!-- HTML Basics section -->
+        <section id="html" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Основы HTML</h2>
+            <p class="mb-4">HTML обеспечивает структуру веб-страницы. Вот несколько ключевых элементов:</p>
+            
+            <!-- Example of semantic HTML elements -->
+            <div class="highlight-box">
+                <h3 class="font-semibold mb-2">Семантика</h3>
+                <p>Эти элементы описывают их значение как для браузера, так и для разработчика:</p>
+                <ul class="list-disc pl-6 mt-2">
+                    <li><code>&lt;header&gt;</code> - Introductory content</li>
+                    <li><code>&lt;nav&gt;</code> - Navigation links</li>
+                    <li><code>&lt;section&gt;</code> - Thematic grouping</li>
+                    <li><code>&lt;article&gt;</code> - Self-contained content</li>
+                    <li><code>&lt;footer&gt;</code> - Footer content</li>
+                </ul>
+            </div>
+            
+            <!-- Example of common HTML tags -->
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-semibold mb-2">Text Elements</h3>
+                    <p>This is a paragraph (<code>&lt;p&gt;</code>).</p>
+                    <p class="text-sm text-gray-500">This is small text.</p>
+                    <p class="font-bold">This is bold text.</p>
+                    <p class="italic">This is italic text.</p>
+                </div>
+                
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-semibold mb-2">Interactive Elements</h3>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        This is a button
+                    </button>
+                    <div class="mt-4">
+                        <label for="example" class="block mb-1">Input field:</label>
+                        <input type="text" id="example" class="border rounded px-3 py-1 w-full" placeholder="Type here">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Basics section -->
+        <section id="css" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Основы CSS</h2>
+            <p class="mb-4">CSS управляет визуальным представлением HTML-элементов. Ключевые понятия:</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Selectors -->
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-semibold mb-2">Selectors</h3>
+                    <p>CSS uses selectors to target elements:</p>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li><code>h1</code> - Element selector</li>
+                        <li><code>.class</code> - Class selector</li>
+                        <li><code>#id</code> - ID selector</li>
+                    </ul>
+                </div>
+                
+                <!-- Properties -->
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-semibold mb-2">Properties</h3>
+                    <p>Common CSS properties:</p>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li><code>color</code> - Text color</li>
+                        <li><code>background-color</code></li>
+                        <li><code>font-size</code></li>
+                        <li><code>margin/padding</code></li>
+                    </ul>
+                </div>
+                
+                <!-- Box Model -->
+                <div class="border rounded-lg p-4">
+                    <h3 class="font-semibold mb-2">Box Model</h3>
+                    <div class="border-2 border-blue-500 p-4 m-4 bg-blue-100">
+                        <div class="border-2 border-green-500 p-4 m-4 bg-green-100">
+                            Content
+                        </div>
+                    </div>
+                    <p class="mt-2 text-sm">Every element is a box with margin, border, padding, and content.</p>
+                </div>
+            </div>
+            
+            <!-- Custom CSS Example -->
+            <div class="mt-8 highlight-box">
+                <h3 class="font-semibold mb-2">Custom CSS Example</h3>
+                <p>The button below is styled with custom CSS (see the &lt;style&gt; section in the head):</p>
+                <button id="special-button" class="mt-4">Special Button</button>
+            </div>
+        </section>
+
+        <!-- Examples section -->
+        <section id="examples" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Практически примеры</h2>
+            
+            <!-- Card Example -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4">Компонент Card</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border rounded-lg overflow-hidden shadow-sm">
+                        <img src="http://static.photos/technology/640x360/1" alt="Technology" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold mb-2">Card Title</h4>
+                            <p class="text-gray-600 mb-4">This is a card component demonstrating HTML structure and CSS styling.</p>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="border rounded-lg overflow-hidden shadow-sm">
+                        <img src="http://static.photos/nature/640x360/2" alt="Nature" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold mb-2">Another Card</h4>
+                            <p class="text-gray-600 mb-4">Cards are versatile components that can display various content types.</p>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="border rounded-lg overflow-hidden shadow-sm">
+                        <img src="http://static.photos/office/640x360/3" alt="Office" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold mb-2">Third Example</h4>
+                            <p class="text-gray-600 mb-4">Notice how these cards maintain consistent styling while displaying different content.</p>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
+                                Click Here
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Form Example -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Пример формы</h3>
+                <form class="max-w-md mx-auto border rounded-lg p-6 shadow-sm">
+                    <h4 class="text-lg font-semibold mb-4 text-center">Contact Form</h4>
+                    
+                    <div class="mb-4">
+                        <label for="name" class="block mb-1">Name:</label>
+                        <input type="text" id="name" class="border rounded px-3 py-2 w-full" placeholder="Your name">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="email" class="block mb-1">Email:</label>
+                        <input type="email" id="email" class="border rounded px-3 py-2 w-full" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="message" class="block mb-1">Message:</label>
+                        <textarea id="message" rows="4" class="border rounded px-3 py-2 w-full" placeholder="Your message"></textarea>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="subscribe" class="mr-2">
+                        <label for="subscribe">Subscribe to newsletter</label>
+                    </div>
+                    
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">HTML+CSS Basics</h3>
+                    <p>Learning resource for web development beginners.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-2">Quick Links</h4>
+                    <ul class="space-y-1">
+                        <li><a href="#html" class="hover:text-blue-300">HTML Basics</a></li>
+                        <li><a href="#css" class="hover:text-blue-300">CSS Basics</a></li>
+                        <li><a href="#examples" class="hover:text-blue-300">Examples</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2025 HTML+CSS Basics</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Simple JavaScript to demonstrate interactivity
+        document.getElementById('special-button').addEventListener('click', function() {
+            alert('This button was styled with custom CSS!');
+        });
+    </script>
+</body>
+</html>
