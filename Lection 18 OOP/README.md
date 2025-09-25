@@ -41,7 +41,7 @@ class Employee:
         Employee.empCount += 1
 
 e1 = Employee("Иван", 24)
-e2 = Employee("Раджеш", 26)
+e2 = Employee("Мария", 26)
 print(f"Количество сотрудников: {Employee.empCount}")  # Количество сотрудников: 2
 ```
 
@@ -188,6 +188,9 @@ print(e1._Employee__age)  # 24
 
 ```python
 class Employee:
+    name = property(get_name, set_name, "name")
+    age = property(get_age, set_age, "age")
+    
     def __init__(self, name, age):
         self.__name = name
         self.__age = age
@@ -204,13 +207,12 @@ class Employee:
     def set_age(self, age):
         self.__age = age
 
-    name = property(get_name, set_name, "name")
-    age = property(get_age, set_age, "age")
+    
 
 e1 = Employee("Иван", 24)
 print(f"Имя: {e1.name}, Возраст: {e1.age}")  # Имя: Иван, Возраст: 24
-e1.name = "Архана"
-print(f"Имя: {e1.name}")  # Имя: Архана
+e1.name = "Елизавета"
+print(f"Имя: {e1.name}")  # Имя: Елизавета
 ```
 
 ## Декоратор Property
@@ -480,30 +482,6 @@ m = Multiplier(2)
 print(m(5))  # 10
 ```
 
-## Полиморфизм в Python
-
-Полиморфизм позволяет одному методу иметь разные реализации в разных классах. Это достигается через утиную типизацию, переопределение методов и перегрузку операторов.
-
-**Пример утиной типизации**:
-
-```python
-class Duck:
-    def sound(self):
-        return "Кря-кря!"
-
-class AnotherBird:
-    def sound(self):
-        return "Я похож на утку!"
-
-def makeSound(bird):
-    print(bird.sound())
-
-duck = Duck()
-another_bird = AnotherBird()
-makeSound(duck)         # Кря-кря!
-makeSound(another_bird) # Я похож на утку!
-```
-
 ## Методы __getitem__, __setitem__ и __delitem__
 
 Эти методы позволяют объекту вести себя как контейнер (например, словарь или список).
@@ -547,6 +525,31 @@ class Dynamic:
 d = Dynamic()
 print(d.unknown)  # Атрибут unknown не найден
 ```
+
+## Полиморфизм в Python
+
+Полиморфизм позволяет одному методу иметь разные реализации в разных классах. Это достигается через утиную типизацию, переопределение методов и перегрузку операторов.
+
+**Пример утиной типизации**:
+
+```python
+class Duck:
+    def sound(self):
+        return "Кря-кря!"
+
+class AnotherBird:
+    def sound(self):
+        return "Я похож на утку!"
+
+def makeSound(bird):
+    print(bird.sound())
+
+duck = Duck()
+another_bird = AnotherBird()
+makeSound(duck)         # Кря-кря!
+makeSound(another_bird) # Я похож на утку!
+```
+
 
 ## Принцип наследования в ООП
 
@@ -1051,22 +1054,4 @@ class InventoryItem:
 item = InventoryItem("Яблоки")
 item.add_stock(10)
 print(item)  # InventoryItem(name='Яблоки', quantity=10)
-```
-
-## Перечисления
-
-Модуль `enum` позволяет создавать перечисления.
-
-**Пример**:
-
-```python
-from enum import Enum
-
-class Color(Enum):
-    RED = 1
-    GREEN = 2
-    BLUE = 3
-
-print(Color.RED)  # Color.RED
-print(Color.RED.value)  # 1
 ```
